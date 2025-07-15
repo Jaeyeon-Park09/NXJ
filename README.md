@@ -46,4 +46,5 @@ ollama run llama3:8b
 - `utils/`: 도구 및 유틸리티 함수
   - `tool_search.py`: 문서 검색 도구
   - `tool_answer.py`: 답변 생성 도구
-  - `tool_report.py`: 보고서 생성 도구
+  - `tool_section.py`: 보고서 목차 생성 도구
+  - `tool_report.py`: 보고서 본문 생성 도구
