@@ -1,13 +1,18 @@
-# RAG 시스템 (nxj_llm)
+# RAG 기반 Report Generation 시스템
 
-Agent 기반 RAG (Retrieval-Augmented Generation) 시스템 준비 중
+Report Generation Tool을 탑재한 Agent 기반 RAG 시스템
+
+LangChain의 딥리서치 오픈소스 [open\_deep\_research](https://github.com/langchain-ai/open_deep_research)를 기반으로 제작함
+
+테스트용 질문: *의료용 휠체어란 무엇인가요? 특히 수동식 휠체어의 정의는 무엇인가요? 보고서를 작성해주세요.*
+
 
 ## 주요 기능
 
 - 문서 검색 및 답변 생성
-- LangGraph 기반 에이전트 시스템
-- Function Calling을 통한 도구 실행
-- Gradio 웹 인터페이스 -> 프론트엔드 미구현
+- Function Calling을 통한 각종 도구 실행
+- Report Generation Tool으로 RAG 기반 리서치 보고서 출력
+
 
 ## 설치 방법
 
@@ -16,42 +21,30 @@ Agent 기반 RAG (Retrieval-Augmented Generation) 시스템 준비 중
 pip install -r requirements.txt
 ```
 
-2. OpenAI API 키 설정:
-# YOUR_API_KEY에 API 키 입력(ex. sk-000100...)
+2. Ollama 모델 준비:
+
 ```bash
-export OPENAI_API_KEY='YOUR_API_KEY'
+ollama serve
 ```
-or
-# bashrc에 API 키 정보 입력
+
 ```bash
-echo "export OPENAI_API_KEY='YOUR_API_KEY'" >> ~/.bashrc
+ollama run llama3:8b
 ```
-# 절대 코드 내에 API 키를 입력하고, 이를 공유하지 마세요.
+
+* 본 프로젝트는 **llama3:8b** 모델을 기반으로 동작합니다.
+* Ollama 미설치 시 [Ollama 공식 문서](https://ollama.com/) 참고
 
 3. 임베딩 데이터 준비:
-- `embeddings/` 디렉토리에 임베딩 파일 배치
-- 또는 `utils/load_all_embeddings.py` 수정
-- 실습생 폴더 /shared/embedding
 
-## 실행 방법
+* `llm_repo_opr/embedding` 디렉토리에 임베딩 JSON 파일 배치해야 코드 실행 가능
 
-### 시스템 테스트
-```bash
-python test_rag.py
-```
 
-### gradio 실행
-```bash
-python run_gradio.py
-```
+## 파일 구조 (주요 파일)
 
-## 파일 구조
-
-- `graph_builder.py`: 메인 그래프 로직
-- `state_types.py`: State 타입 정의
-- `run_gradio.py`: Gradio UI
-- `registry.py`: 도구 레지스트리
+- `embedding/`: 임베딩 데이터셋 (.json)
+- `test_report.py`: RAG 기반 보고서 생성 기능 테스트
 - `utils/`: 도구 및 유틸리티 함수
   - `tool_search.py`: 문서 검색 도구
   - `tool_answer.py`: 답변 생성 도구
-  - `tool_diagnose.py`: 시스템 진단 도구
+  - `tool_section.py`: 보고서 목차 생성 도구
+  - `tool_report.py`: 보고서 본문 생성 도구
