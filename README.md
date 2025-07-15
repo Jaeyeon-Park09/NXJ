@@ -41,7 +41,8 @@ ollama run llama3:8b
 
 ## 파일 구조 (주요 파일)
 
-- `embedding/`: 임베딩 데이터셋 (.json)
+- `embedding/`: 임베딩 데이터셋 (.json) - 미포함(따로 파일 집어넣어야 모델 구동 가능)
+- `test_embed_data.py`: 'embedding/' 디렉토리 내 JSON 파일 개요 파악
 - `test_report.py`: RAG 기반 보고서 생성 기능 테스트
 - `utils/`: 도구 및 유틸리티 함수
   - `tool_search.py`: 문서 검색 도구
