@@ -1,7 +1,11 @@
 # RAG 기반 Report Generation 시스템
 
 Report Generation Tool을 탑재한 Agent 기반 RAG 시스템
+
 LangChain의 딥리서치 오픈소스 [open\_deep\_research](https://github.com/langchain-ai/open_deep_research)를 기반으로 제작함
+
+테스트용 질문: *의료용 휠체어란 무엇인가요? 특히 수동식 휠체어의 정의는 무엇인가요? 보고서를 작성해주세요.*
+
 
 ## 주요 기능
 
@@ -35,13 +39,10 @@ ollama run llama3:8b
 * `llm_repo_opr/embedding` 디렉토리에 임베딩 파일 배치
 
 
-## 파일 구조
+## 파일 구조 (주요 파일)
 
-- 'reportgen_rag_nos' 
-- `graph_builder.py`: 메인 그래프 로직
-- `state_types.py`: State 타입 정의
+- `test_report.py`: RAG 기반 보고서 생성 기능 테스트
 - `utils/`: 도구 및 유틸리티 함수
   - `tool_search.py`: 문서 검색 도구
   - `tool_answer.py`: 답변 생성 도구
-  - `tool_diagnose.py`: 시스템 진단 도구
   - `tool_report.py`: 보고서 생성 도구
