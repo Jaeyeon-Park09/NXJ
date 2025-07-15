@@ -41,6 +41,7 @@ ollama run llama3:8b
 
 ## 파일 구조 (주요 파일)
 
+- `embeddings/`: 임베딩 데이터셋 (.json)
 - `test_report.py`: RAG 기반 보고서 생성 기능 테스트
 - `utils/`: 도구 및 유틸리티 함수
   - `tool_search.py`: 문서 검색 도구
