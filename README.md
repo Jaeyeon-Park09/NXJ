@@ -9,7 +9,7 @@ LangChain의 딥리서치 오픈소스 [open\_deep\_research](https://github.com
 
 **예시:**
 
-<img width="782" height="588" alt="image" src="https://github.com/user-attachments/assets/b96bc400-f01a-4da8-b479-72bb62c9e581" />
+<img width="391" height="294" alt="image" src="https://github.com/user-attachments/assets/b96bc400-f01a-4da8-b479-72bb62c9e581" />
 
 
 
