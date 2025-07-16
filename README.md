@@ -18,12 +18,12 @@ LangChain의 딥리서치 오픈소스 [open\_deep\_research](https://github.com
 
 예시1: *의료용 휠체어, 특히 수동식 휠체어가 무엇인지 보고서를 작성해주세요.*
 
-<img width="626" height="470" alt="image" src="https://github.com/user-attachments/assets/b96bc400-f01a-4da8-b479-72bb62c9e581" />
+<img width="978" height="735" alt="image" src="https://github.com/user-attachments/assets/b96bc400-f01a-4da8-b479-72bb62c9e581" />
 
 
 예시2: *흡수성 마그네슘 합금 관련 의약품의 인허가에 대한 보고서를 작성하라.*
 
-<img width="1977" height="1197" alt="image" src="https://github.com/user-attachments/assets/d3639a46-a1f9-47aa-9159-9f9c7c3aedee" />
+<img width="989" height="599" alt="image" src="https://github.com/user-attachments/assets/d3639a46-a1f9-47aa-9159-9f9c7c3aedee" />
 
 
 
