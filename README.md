@@ -7,9 +7,8 @@ LangChain의 딥리서치 오픈소스 [open\_deep\_research](https://github.com
 
 ## 주요 기능
 
-- 문서 검색 및 답변 생성
-- Function Calling을 통한 각종 도구 실행
-- Report Generation Tool으로 RAG 기반 리서치 보고서 출력
+- RAG 기반 문서 탐색 및 리서치 보고서 출력
+- LLM이 직접 소목차 생성 및 내용단락 구획
 - LLM을 보고서 내 목차마다 따로 호출하여 본문 작성 정확도를 높임
 - 유사도 검색 관련 Hyperparmeters 튜닝
 
