@@ -12,11 +12,15 @@ LangChain의 딥리서치 오픈소스 [open\_deep\_research](https://github.com
 <img width="782" height="588" alt="image" src="https://github.com/user-attachments/assets/b96bc400-f01a-4da8-b479-72bb62c9e581" />
 
 
+
+
 ## 주요 기능
 
 - 문서 검색 및 답변 생성
 - Function Calling을 통한 각종 도구 실행
 - Report Generation Tool으로 RAG 기반 리서치 보고서 출력
+
+
 
 
 ## 설치 방법
@@ -42,6 +46,8 @@ ollama run llama3:8b
 3. 임베딩 데이터 준비:
 
 * `llm_repo_opr/embedding` 디렉토리에 임베딩 JSON 파일 배치해야 코드 실행 가능
+
+
 
 
 ## 파일 구조 (주요 파일)
