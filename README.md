@@ -4,6 +4,8 @@ Report Generation Tool을 탑재한 Agent 기반 RAG 시스템
 
 LangChain의 딥리서치 오픈소스 [open\_deep\_research](https://github.com/langchain-ai/open_deep_research)를 기반으로 제작함
 
+데모 링크: [](http://127.0.0.1:7860/)
+
 
 ## 주요 기능
 
