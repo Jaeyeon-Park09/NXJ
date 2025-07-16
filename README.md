@@ -1,6 +1,7 @@
 # RAG 기반 Report Generation 시스템
 
 Report Generation Tool을 탑재한 Agent 기반 RAG 시스템
+
 LangChain의 딥리서치 오픈소스 [open\_deep\_research](https://github.com/langchain-ai/open_deep_research)를 기반으로 제작함
 
 테스트용 질문: *의료용 휠체어, 특히 수동식 휠체어가 무엇인지 보고서를 작성해주세요.*
