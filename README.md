@@ -4,7 +4,7 @@ Report Generation Tool을 탑재한 Agent 기반 RAG 시스템
 
 LangChain의 딥리서치 오픈소스 [open\_deep\_research](https://github.com/langchain-ai/open_deep_research)를 기반으로 제작함
 
-테스트용 질문: *의료용 휠체어란 무엇인가요? 특히 수동식 휠체어의 정의는 무엇인가요? 보고서를 작성해주세요.*
+테스트용 질문: *의료용 휠체어, 특히 수동식 휠체어가 무엇인지 보고서를 작성해주세요.*
 
 
 ## 주요 기능
@@ -49,3 +49,8 @@ ollama run llama3:8b
   - `tool_answer.py`: 답변 생성 도구
   - `tool_section.py`: 보고서 목차 생성 도구
   - `tool_report.py`: 보고서 본문 생성 도구
+
+
+ ## 예시 사진
+<img width="1564" height="1176" alt="image" src="https://github.com/user-attachments/assets/b96bc400-f01a-4da8-b479-72bb62c9e581" />
+
