@@ -140,6 +140,7 @@ def main():
     search_result = search_context_for_rag(question, top_k=5)
     raw_context = search_result.get("context", "")
     sources = search_result.get("sources", [])
+    scores = search_result.get("scores", [])  # 유사도 점수 리스트
     rag_logs = search_result.get("rag_logs", [])
     permit_keywords = ["인허가", "허가", "승인", "등록", "신고", "행정 절차", "법적 요건", "제도"]
     permit_query = question + " " + " ".join(permit_keywords)
@@ -181,15 +182,16 @@ def main():
     print(body_sections[section_titles[1]])
     print(body_sections[section_titles[2]])
     # 참고문헌은 결론 이후 한 번만 출력
-    def make_references(context, sources):
+    def make_references(sources, scores, threshold=0.35, top_k=3):
         from collections import OrderedDict
-        context_lines = [line.strip() for line in context.split("\n") if line.strip()]
-        context_map = OrderedDict((line, prettify_source_filename(sources[i]) if i < len(sources) else "") for i, line in enumerate(context_lines))
-        unique_files = list(OrderedDict.fromkeys(context_map.values()))
+        # 상위 3개, 유사도 임계값 이상만
+        filtered = [(src, score) for src, score in zip(sources, scores) if score >= threshold]
+        filtered = filtered[:top_k]
+        unique_files = list(OrderedDict.fromkeys([prettify_source_filename(src) for src, _ in filtered]))
         if unique_files:
             return "참고문헌:\n" + "\n".join(f"- {f}" for f in unique_files)
         return ""
-    references_block = make_references(context, sources)
+    references_block = make_references(sources, scores)
     print("\n[최종 보고서]")
     print("="*40)
     print("[목차]")
