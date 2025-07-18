@@ -27,6 +27,11 @@ LangChain의 딥리서치 오픈소스 [open\_deep\_research](https://github.com
 
 <img width="1005" height="509" alt="image" src="https://github.com/user-attachments/assets/75f472fc-8e1e-409d-b8fb-e886dfe03dbe" />
 
+예시4) *국내에서 한약 제제의 신약으로 허가받기 위해 필요한 비임상 시험 항목과 관련 가이드라인은 무엇인지 보고서를 작성하세요.*
+<img width="1598" height="1265" alt="image" src="https://github.com/user-attachments/assets/bdbf646b-a031-4c31-a8a0-495e76ca4d1c" />
+
+예시5) *의약품 임상시험 결과보고서 작성 시 구성과 내용에 대한 가이드라인을 알려주세요.*
+<img width="1591" height="1042" alt="image" src="https://github.com/user-attachments/assets/c5cbb666-7d43-45dc-885a-fe0f5a386b3a" />
 
 
 
